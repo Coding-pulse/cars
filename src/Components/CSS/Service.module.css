@@ -1,0 +1,105 @@
+.box {
+  width: 100vw;
+  height: 550px;
+  background-image: url("C:/Users/PC/Downloads/abstract.jpg");
+  background-attachment: scroll;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgba(196, 23, 23, 0.884);
+  flex-basis: 550px;
+}
+.top1 {
+  display: block;
+}
+
+.top1::after {
+  content: " ";
+  height: 5px;
+  width: 50px;
+  background-color: ghostwhite;
+  position: relative;
+  display: block;
+  top: -10px;
+  left: 32px;
+}
+
+.col {
+  width: 20%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10px;
+  position: relative;
+  opacity: 0;
+  top: -10%;
+}
+.col:hover {
+  transition-duration: 0.4s;
+}
+.top2 {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.col h1 {
+  margin: 0;
+  padding: 0;
+}
+.col h1:first-of-type {
+  font-size: 60px;
+}
+
+.er span {
+  display: block;
+  font-size: 19px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 500;
+  color: ghostwhite;
+}
+
+.col:hover {
+  box-shadow: inset 0px 0px 19px 12px black;
+  cursor: pointer;
+}
+
+.ty {
+  color: crimson;
+}
+@media (max-width: 800px) {
+  .box {
+    width: 100%;
+    height: 760px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    /*flex-basis: 600px;*/
+  }
+  .top2 {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .col {
+    width: 80%;
+  }
+}
+
+.run {
+  transition-duration: 1.5s;
+  transition-timing-function: linear;
+  opacity: 1;
+  top: 0%;
+}

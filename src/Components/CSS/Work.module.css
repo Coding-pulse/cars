@@ -1,0 +1,136 @@
+.back {
+  width: 100vw;
+  height: 760px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#a {
+  height: 33%;
+  width: 33%;
+  border-radius: 50%;
+  background-color: aqua;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  filter: blur(50px);
+}
+#b {
+  height: 33%;
+  width: 33%;
+  border-radius: 50%;
+  background-color: rgb(61, 216, 157);
+  position: absolute;
+  left: 45%;
+  top: 50px;
+  filter: blur(50px);
+}
+#c {
+  height: 33%;
+  width: 33%;
+  border-radius: 50%;
+  background-color: rgb(128, 50, 230);
+  position: absolute;
+  left: 267px;
+  filter: blur(50px);
+  top: 30%;
+}
+#d {
+  height: 33%;
+  width: 33%;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  left: 167px;
+  filter: blur(50px);
+  top: 30%;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: rgb(207, 218, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 1%;
+  box-sizing: border-box;
+}
+.top1 {
+  height: 7%;
+  width: 55%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: justify;
+}
+.top1 h1 {
+  margin: 0;
+  padding: 0;
+}
+.top1 span {
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.top2 {
+  width: 88%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5%;
+  padding-left: 1%;
+  padding-top: 1%;
+  opacity: 0;
+  transform: translateX(-15%);
+}
+@media (max-width: 800px) {
+  .back {
+    /*  display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;*/
+    flex-wrap: nowrap;
+    height: 2450px;
+    width: 100vw;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .top1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    flex-wrap: nowrap;
+  }
+  .top2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 800px;
+    flex-wrap: nowrap;
+  }
+}
+.tra {
+  transition-duration: 1.5s;
+  transition-timing-function: linear;
+  opacity: 1;
+  transform: translateX(0%);
+}
