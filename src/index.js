@@ -13,15 +13,15 @@ import Postdis from "./Components/Postdis";
 var router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Item />,
     children: [
       {
         path: "/",
-        element: <Item />,
-        children: [
-          { path: "/", element: <Textbox /> },
-          { path: "/show-post", element: <Postdis /> },
-        ],
+        element: <Textbox />,
+      },
+      {
+        path: "/show-post",
+        element: <Postdis />,
       },
     ],
   },
@@ -29,7 +29,7 @@ var router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <App />
   </React.StrictMode>
 );
 

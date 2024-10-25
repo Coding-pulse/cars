@@ -4,7 +4,7 @@ import { IoIosContact } from "react-icons/io";
 import { IoPricetag } from "react-icons/io5";
 import { CiCalendarDate } from "react-icons/ci";
 import { ImAttachment } from "react-icons/im";
-import { qw } from "../store/Item";
+import { qw } from "../store/Item.js";
 import { useOutletContext } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -18,16 +18,16 @@ export default function Textbox() {
   var r2 = useRef();
   var fun = (event) => {
     event.preventDefault();
-    var packet = { title: r1.current, text: r2.current.value };
+    var packet = { title: r1.current.value, text: r2.current.value };
     con.dispatch1({ post: 1, payload: packet });
-    // nav("/show-post");
+    nav("/show-post");
     console.log(con.state3);
   };
   var fun1 = (event) => {
-    r1.current = event.target.value;
+    r1.current.value = event.target.value;
   };
   var fun2 = (event) => {
-    r2.current = event.target.value;
+    r2.current.value = event.target.value;
   };
   return (
     <>
@@ -73,11 +73,6 @@ export default function Textbox() {
 
           <button onClick={fun}>Post</button>
         </div>
-      </div>
-      <div>
-        <Link to="/show-post">
-          <button> Show post</button>
-        </Link>
       </div>
     </>
   );

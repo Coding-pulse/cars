@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer, useState } from "react";
 import Postdis from "E:/react/my-app/src/Components/Postdis.js";
 import Textbox from "../Components/Textbox";
 import { Outlet } from "react-router-dom";
-export var qw = createContext({});
+export var qw = createContext();
 
 export default function Item(prop) {
   var ar = [1, 2, 3, 4, 5, 67];
